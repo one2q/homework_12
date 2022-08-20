@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Все посты найденные по запросу {{ user_request }}</title>
+    <link rel="stylesheet" href="../../static/style.css">
+</head>
+<body>
+<main>
+
+    <a href="/" class="link">Назад</a>
+
+    <h1>Посты по запросу {{ user_request }}</h1>
+
+    {% if post_list %}
+        {% for item in post_list %}
+            <div class="post">
+            <img src="{{item["pic"]  }}" width="100%" alt="">
+            <p>{{ item['content'] }}</p>
+            <hr>
+            </div>
+        {% endfor %}
+    {% else %}
+            <p>Постов с таким словом нет, попробуйте еще</p>
+    {% endif %}
+    <hr>
+    <a href="../../loader/templates/post_form.html" class="button">Добавить пост</a>
+
+</main>
+</body>
+</html>
