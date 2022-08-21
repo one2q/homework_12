@@ -7,7 +7,8 @@ body {
 
 main {
     margin: 32px auto;
-    width: 320px;
+    width: 420px;
+    background-color: floralwhite;
 }
 
 hr {
@@ -26,16 +27,19 @@ input[type=text] {
     padding: 8px;
     position: relative;
     top: -2px;
+
 }
 
 textarea {
-    width: 100%;
+    width: 93%;
     margin-bottom: 16px;
+    margin-left: 10px;
 }
 
 input[type=file] {
 
     margin-bottom: 16px;
+
 
 
 }
