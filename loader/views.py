@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template, request, send_from_directory
 from werkzeug.utils import secure_filename
+
+# from app import new_logger
 from functions import allowed_file, picture_save, add_post
 
 # Создаем новый блюпринт
@@ -16,6 +18,7 @@ def page_post_upload():
 	picture = request.files.get('picture')
 	content = request.form.get('content')
 	if not picture or not content:  # Проверка на ввод текста и картинки
+		# new_logger.info("Все работает")
 		return 'Нет картинки или текста'
 
 	filename = secure_filename(picture.filename)
